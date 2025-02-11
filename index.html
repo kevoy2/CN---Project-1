@@ -3,17 +3,33 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<title> CN - Project #1 </title>
+        <script type="text/javascript" src="./script.js"></script>
 	</head>
 	<body>
         <!--Header Box-->
 		<div class="header">
 			<div class="name">
-				<h1>CN - Project #1</h1>
+				<h1>CN - Project #1: Fibonaci Calculator</h1>
 			</div>
 		</div> 
 		<!--Content Box-->
 		<div class="content">
-            Fibonaci Sequence Generation
+            <h3>Fibonaci Querue</h3>
+            <form method="post" id="calc"> 
+                Enter the value of N for the Fibonaci calculation. Note, the input must be a number:<br>
+                N = <input name="fibonaci" type="number" value="0"> 
+                <p>  
+                Do you want the step(s) display for how to calculate the fibonaci number?<br> 
+                <input name="shown" type="radio" value="Y"> Yes
+                <p> 
+                <input name="shown" type="radio" value="N" checked> No
+                <p> 
+                <input onclick="retrieve()" type="submit" value="Calculate"> 
+                <input type="reset"> 
+            </form> 
+            <hr>
+            <h3>Result:</h3>
+            <div onload="display()" id="result"></div>
 		</div>
 	</body>
 </html>
