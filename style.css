@@ -29,3 +29,11 @@ h2 {
     top: 10px;
 	bottom: 170px;
 }
+
+#n {
+    color: blue;
+}
+
+#answer {
+    color: blueviolet;
+}

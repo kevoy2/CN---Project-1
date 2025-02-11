@@ -1,28 +1,30 @@
 // Global Variables
 var n;
-var x = 1;
-var result;
 var option;
+var result = 0;
 
 // A function to retrieve html form data.
 function retrieve() {
-    var form = document.getElementById('calc');
-    n = form.fibonaci.value;
-    option = form.shown.value;
-    calculate();
+    n = document.getElementById('input').value;
+    result = calculate(n);
+    display();
 }
 
 // A function to retrieve html form data.
 function display() {
-    var object = document.getElementById('result');
-    object.innerHTML = "Result: <br> N/a";
+    var one = document.getElementById('n');
+    one.innerHTML = n;
+    var two = document.getElementById('answer');
+    two.innerHTML = result;
 }
 
 // Function to calculate the fibonaci number indicated by the website user.
-function calculate() {
-    for(let i = 0; i < n - 1; i++) {
-        result = i + x;
-        x++;
+function calculate(x) {
+    if(x == 0) {
+        return 0;
+    } else if(x == 1) {
+        return 1;
+    } else {
+        return calculate(x - 1) + calculate(x - 2);
     }
-    alert("F(" + n + ") = " + result);
 }

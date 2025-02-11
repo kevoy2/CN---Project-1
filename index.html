@@ -14,22 +14,15 @@
 		</div> 
 		<!--Content Box-->
 		<div class="content">
-            <h3>Fibonaci Querue</h3>
-            <form method="post" id="calc"> 
-                Enter the value of N for the Fibonaci calculation. Note, the input must be a number:<br>
-                N = <input name="fibonaci" type="number" value="0"> 
-                <p>  
-                Do you want the step(s) display for how to calculate the fibonaci number?<br> 
-                <input name="shown" type="radio" value="Y"> Yes
-                <p> 
-                <input name="shown" type="radio" value="N" checked> No
-                <p> 
-                <input onclick="retrieve()" type="submit" value="Calculate"> 
-                <input type="reset"> 
-            </form> 
+            <h3>Fibonacci Query:</h3>
+            Enter the value of N for the Fibonaci calculation (Note, the input must be a number):<br>
+            N = <input name="fibonacci" type="number" value="0" id="input"> 
+            <p>  
+            <button onclick="retrieve()">Calculate</button> 
             <hr>
             <h3>Result:</h3>
-            <div onload="display()" id="result"></div>
+            <div onload="display()" id="result">F(<span id="n">N</span>) = <span id="answer">???</span></div>
+            <br>
 		</div>
 	</body>
 </html>
