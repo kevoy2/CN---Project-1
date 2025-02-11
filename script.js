@@ -1,5 +1,6 @@
 // Global Variables
 var n;
+var x = 1;
 var result;
 var option;
 
@@ -8,7 +9,7 @@ function retrieve() {
     var form = document.getElementById('calc');
     n = form.fibonaci.value;
     option = form.shown.value;
-    alert("N = " + n)
+    calculate();
 }
 
 // A function to retrieve html form data.
@@ -19,5 +20,9 @@ function display() {
 
 // Function to calculate the fibonaci number indicated by the website user.
 function calculate() {
-
+    for(let i = 0; i < n - 1; i++) {
+        result = i + x;
+        x++;
+    }
+    alert("F(" + n + ") = " + result);
 }
